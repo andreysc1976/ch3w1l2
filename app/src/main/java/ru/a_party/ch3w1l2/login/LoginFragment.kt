@@ -17,16 +17,21 @@ class LoginFragment: MvpAppCompatFragment(R.layout.fragment_login),LoginView {
             LoginPresenter()
     }
 
-    override fun showUserCaption() {
-        //TODO("Not yet implemented")
-    }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLoginBinding.bind(view)
+        binding.button.setOnClickListener {
+            presenter.userLogin(binding.inputLoginText.text.toString())
+        }
     }
 
     companion object {
         fun newInstance(): Fragment = LoginFragment()
+    }
+
+    override fun pressOk(userlogin: String) {
+        TODO("Not yet implemented")
     }
 }

@@ -9,10 +9,11 @@ import ru.a_party.ch3w1l2.MyApp.Navigation.router
 import ru.a_party.ch3w1l2.login.LoginScreen
 
 class MainActivity : AppCompatActivity() {
-    private val navigator = CustomNavigator(activity=this,R.id.content)
+    private val navigator = CustomNavigator(activity=this,R.id.main_container)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         if (savedInstanceState == null){
            router.navigateTo(LoginScreen)
         }

@@ -5,5 +5,5 @@ import moxy.viewstate.strategy.alias.SingleState
 
 interface LoginView: MvpView {
     @SingleState
-    fun showUserCaption()
+    fun pressOk(userlogin:String)
 }
