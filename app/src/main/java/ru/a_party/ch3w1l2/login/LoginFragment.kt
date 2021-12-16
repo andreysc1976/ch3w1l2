@@ -23,15 +23,11 @@ class LoginFragment: MvpAppCompatFragment(R.layout.fragment_login),LoginView {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLoginBinding.bind(view)
         binding.button.setOnClickListener {
-            presenter.userLogin(binding.inputLoginText.text.toString())
+            presenter.userLogin(binding.inputLoginText.text.toString(),binding.InputPasswordText.text.toString())
         }
     }
 
     companion object {
         fun newInstance(): Fragment = LoginFragment()
-    }
-
-    override fun pressOk(userlogin: String) {
-        TODO("Not yet implemented")
     }
 }

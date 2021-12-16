@@ -2,6 +2,7 @@ package ru.a_party.ch3w1l2
 
 import android.app.Application
 import com.github.terrakok.cicerone.Cicerone
+import ru.a_party.ch3w1l2.db.UserListImpl
 
 class MyApp: Application() {
 
@@ -11,5 +12,6 @@ class MyApp: Application() {
         }
         val navigatorHolder = cicerone.getNavigatorHolder()
         val router = cicerone.router
+        val userDB = UserListImpl()
     }
 }
